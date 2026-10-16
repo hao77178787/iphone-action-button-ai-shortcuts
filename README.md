@@ -16,7 +16,7 @@
 | 方案 | 快捷指令名称 | 特点与功能 | 一键获取链接 |
 | :--- | :--- | :--- | :--- |
 | **方案 1** | **ChatGPT 原生** | 依托官方 App，极简三步，专为 iOS 弹窗优化排版 | [📥 点击导入「ChatGPT 原生」](https://www.icloud.com/shortcuts/31995a89ad594498a35264110bfc8a1e) |
-| **方案 2** | **gemini-3.8-flash** | 官方 API 直连、**自带 Google 联网搜索**、震动触感反馈、自动备份备忘录 | [📥 点击导入「gemini-3.8-flash」](https://www.icloud.com/shortcuts/66437953dc574134ab5152b7ac77142c) |
+| **方案 2** | **gemini-3.8-flash-V1.1** | 官方 API 直连、**自带 Google 联网搜索**、震动触感反馈、零报错纯净开箱即用 | [📥 点击导入「gemini-3.8-flash-V1.1」](https://www.icloud.com/shortcuts/1a90acf09c1147938418613cd734371e) |
 
 ---
 
@@ -39,26 +39,25 @@
 
 ---
 
-## 方案 2：Gemini 3.8 Flash 终极版
+## 方案 2：Gemini 3.8 Flash 终极版（V1.1 开箱即用版）
 
 直接调用 Google Gemini 官方 API，响应速度极快，功能强大。
 
 ```mermaid
 flowchart TD
-    A["长按 Action Button"] --> B["听写语音 (普通话/暂停后提交)"]
+    A["长按 Action Button"] --> B["听写语音 (普通话/暂停后自动提交)"]
     B --> C["注入系统排版 Prompt + 听写文本"]
     C --> D["POST 请求 Gemini 3.8 Flash\n(内置 Google 联网搜索 + 极速配置)"]
     D --> E["遍历提取 candidates.text 并合并"]
     E --> F["📳 触发机身震动反馈"]
     F --> G["💬 屏幕顶部弹窗展示回答"]
-    G --> H["📝 静默保存至苹果备忘录归档"]
 ```
 
 ### 核心亮点：
 1. **⚡ Gemini 3.8 Flash 极速响应**：关闭思考延迟（`thinkingBudget: 0`），实现松手即答。
 2. **🌐 内置 Google Search 实时联网**：支持询问最新天气、即时新闻或实时数据。
 3. **📳 震动触感反馈**：模型生成完成瞬间震动一次，体验贴近 iOS 原生。
-4. **📝 自动同步备忘录**：回答内容自动静默写入备忘录归档（`AI 生成 shortcut` 文件夹），随时复盘。
+4. **✨ 纯净跨设备通用（V1.1 特性）**：已移除特定私有备忘录文件夹依赖，任何 iPhone 导入后均可直接稳定运行，杜绝报错。
 
 > **安装后的唯一修改项**：
 > 导入快捷指令后，在 **「获取 URL 的内容」** 动作中，将 URL 末尾的 `key=...` 替换为你自己的 [Google AI Studio API Key](https://aistudio.google.com/)。
@@ -71,7 +70,7 @@ flowchart TD
 2. 进入 **「操作按钮」**（Action Button）。
 3. 左右滑动至 **「快捷指令」** 选项。
 4. 点击下方蓝色的 **「选取快捷指令…」**。
-5. 勾选刚才导入的 **`ChatGPT 原生`** 或 **`gemini-3.8-flash`**。
+5. 勾选刚才导入的 **`ChatGPT 原生`** 或 **`gemini-3.8-flash-V1.1`**。
 
 ---
 
